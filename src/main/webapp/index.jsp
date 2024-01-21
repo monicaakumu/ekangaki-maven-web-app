@@ -7,7 +7,7 @@
   <h2> Call Us : +1 - 240 643 1098 </h2>
 
   <h3> Address : Falling Water Court, Bowie Maryland, 20720 </h3>
- <h3> Ako Chuks Xav Emaan Mildred Ify</h3>
+ <h3> Ako Chuks Xav Emaan Mildred Ify Terry</h3>
   <h3> Learn Here.. Lead Anywhere..!! </h3>
 
 </body>
