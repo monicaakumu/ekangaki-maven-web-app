@@ -1,2 +1,0 @@
-AFRO INSTITUTE SAT 11/4/2023
-We have succeeded in our Jenkins CI/CD Project
