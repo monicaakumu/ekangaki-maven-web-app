@@ -1,5 +1,3 @@
-# Learning how to write a Jenkins Declarative Pipeline Script
-
 
 pipeline {
     agent any
