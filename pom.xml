@@ -91,22 +91,21 @@
     </dependency>
 </dependencies>
 
-	
-	<distributionManagement>
-	
-	    <repository>
-	      <id>nexus</id>
-	      <name>AIT-RELEASE</name>
-	      <url>http://100.25.111.136:8081/repository/AIT-RELEASE/</url>
-	    </repository>
-	    
-	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>AIT-SNAPSHOT </name>
-	      <url>http://100.25.111.136:8081/repository/AIT-SNAPSHOT/</url>
-	    </snapshotRepository>
-	    
-	</distributionManagement>
+<distributionManagement>
+    <repository>
+        <id>nexus</id>
+        <name>Nguti-Credit-Union-App-release Releases Nexus Repo</name>
+        <url>http://54.175.66.120:8081/repository/Release-Ekangaki-Repo/</url>
+    </repository>
+
+    <snapshotRepository>
+        <id>nexus</id>
+        <name>Nguti-Credit-Union-App-snapshot Snapshots Nexus Repo</name>
+        <url>http://54.175.66.120:8081/repository/Snapshot-Ekangaki-Repo/</url>
+    </snapshotRepository>
+</distributionManagement>	
+
+	     
 	
 	<build>
 		<finalName>maven-web-application</finalName>
