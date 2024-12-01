@@ -7,7 +7,7 @@
   <h2> Call Us : +1 - 240 643 1098 </h2>
 
   <h3> Address : 15018 Running Park CT Bowie, MD 20715-3377 </h3>
- <h3> Ekangaki, Robinson, Neka, Ake, Chukwu, Moses, Sandra, Victor, Ako, Xaverie</h3>
+ <h3> Ekangaki, Robinson, Neka, Ake, Emaan, Chukwu, Moses, Sandra, Victor, Ako, Xaverie</h3>
   <h3> Learn Here.. Lead Anywhere..!! </h3>
    <h4> We'll Make Africa Great Again!! </h4>
 
