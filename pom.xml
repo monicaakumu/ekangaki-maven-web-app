@@ -100,7 +100,7 @@
     <snapshotRepository>
         <id>nexus</id>
         <name>Akumu-Snapshot-Repository</name>
-        <url>http://3.87.174.59:8081/repository/Akumu-Snapshot-Repository/</url>
+        <url>http://3.87.174.59:8081/repository/Akumu-Snapshot-repository/</url>
     </snapshotRepository>
 </distributionManagement>
 	
