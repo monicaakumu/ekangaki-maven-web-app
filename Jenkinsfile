@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'M3'    // must match the Maven installation name in Jenkins
-        jdk   'jdk17' // must match the JDK installation name in Jenkins
+        maven 'M3'
+        jdk   'jdk17'
     }
 
     environment {
@@ -37,8 +37,13 @@ pipeline {
 
         stage('Sonar Scanner') {
             steps {
-                withSonarQubeEnv('sonar-server') {   // replace with your SonarQube server name
-                    sh 'mvn sonar:sonar'
+                withSonarQubeEnv('sonar-server') {
+                    sh """
+                        mvn sonar:sonar \
+                        -Dsonar.projectKey=maven-web-application \
+                        -Dsonar.host.url=http://52.23.169.111:9000 \
+                        -Dsonar.login=squ_dcb8613eb894423cd6fc41c728a8e6e0ea179c74
+                    """
                 }
             }
         }
@@ -54,15 +59,15 @@ pipeline {
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
                     protocol: 'http',
-                    nexusUrl: '3.87.174.59:8081',
+                    nexusUrl: '52.23.169.111:8081',
                     groupId: 'com.mt',
                     version: '0.0.2-RELEASE',
-                    repository: 'Akumu-Release-Repository',   // repo name only
+                    repository: 'Jenkins-Release-Repository',
                     credentialsId: 'nexus-credential',
                     artifacts: [[
                         artifactId: 'maven-web-application',
                         classifier: '',
-                        file: 'target/maven-web-application.war',  // must exist
+                        file: 'target/maven-web-application.war',
                         type: 'war'
                     ]]
                 )
@@ -84,7 +89,7 @@ pipeline {
         stage('Push Docker image to DockerHub') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'docker-credential') { 
+                    docker.withRegistry('https://index.docker.io/v1/', 'docker-credential') {
                         sh "docker push moniakumu/maven-web-application:${BUILD_NUMBER}"
                     }
                 }
